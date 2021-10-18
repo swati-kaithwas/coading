@@ -22,16 +22,20 @@ h1{
     async function TopHeading(){
         let res =await
          fetch(`http://newsapi.org/v2/top-headlines?country=in&apiKey=b57ecee37f594630a816044a1d8c5552`);
-    let data=await res.json();
+    let data = await res.json();
     console.log("data:",data);
     appendnews_top(data.articles);
     
       }
       TopHeading();
-    //   let news_popular=document.getElementById("")
-    //   function appendnews_top(news1){
-    //     top_heading.innerHTML=null;
-    //     news1.forEach(())
-    //   }
+      let news_popular=document.getElementById("")
+      function appendnews_top(news1){
+        top_heading.innerHTML=null;
+        news1.forEach(({articles:{author,title,publishedAt,content,description}})=>{
+            let div1=document.createElement("div");
+
+
+        })
+      }
       
 </script>
