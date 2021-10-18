@@ -16,8 +16,6 @@ xyz{
 </style>
 <body>
     <h1>bbc news</h1>
-    <input id="text" placeholder="search">
-    <button onclick="search()">search</button>
     <div id="top_heading"></div>
 </body>
 </html>
@@ -26,7 +24,7 @@ xyz{
     
     async function TopHeading(){
         let res =await
-         fetch(`http://newsapi.org/v2/top-headlines?country=in&apiKey=b57ecee37f594630a816044a1d8c5552`);
+         fetch(`http://newsapi.org/v2/everything?q=olympics&apiKey=b57ecee37f594630a816044a1d8c5552`);
     let data = await res.json();
     console.log("data:",data);
     appendnews_top(data.articles);
@@ -53,15 +51,6 @@ xyz{
      er.append(div1,th3,div2,cp3,div4,img);
      news_popular.append(er);
         })
-      }
-      function search(){
-          let inx=document.getElementById("text");
-          var x=inx.value;
-        if(localStorage.getItem("abc")===null)
-    {
-        localStorage.setItem("abc"),JSON.stringify(([]));
-    }
-    window.location.href=search.html;
       }
             
 </script>
