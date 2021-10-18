@@ -13,6 +13,10 @@ h1{
 xyz{
     display:grid;
 }
+/* #text{
+    width:40%;
+    height:20%;
+} */
 </style>
 <body>
     <h1>bbc news</h1>
@@ -58,10 +62,15 @@ xyz{
           let inx=document.getElementById("text");
           var x=inx.value;
         if(localStorage.getItem("abc")===null)
-    {
-        localStorage.setItem("abc"),JSON.stringify(([]));
-    }
-    window.location.href=search.html;
+       {
+        localStorage.setItem("abc",JSON.stringify([]));
+
+         }
+         let abcdef=JSON.parse(localStorage.getItem("abc"));
+         abcdef.push(inx.value);
+       localStorage.setItem("abc",JSON.stringify(abcdef))
+
+    window.location.href="search.html";
       }
             
 </script>

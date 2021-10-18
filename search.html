@@ -52,5 +52,20 @@ xyz{
      news_popular.append(er);
         })
       }
+      function search(){
+          let inx=document.getElementById("text");
+          var x=inx.value;
+        if(localStorage.getItem("abc")===null)
+       {
+        localStorage.setItem("abc",JSON.stringify([]));
+
+         }
+         let abcdef=JSON.parse(localStorage.getItem("abc"));
+         abcdef.push(inx.value);
+       localStorage.setItem("abc",JSON.stringify(abcdef))
+
+    window.location.href="search.html";
+      }
+            
             
 </script>
