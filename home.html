@@ -1,4 +1,3 @@
-<search class="html"></search>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+h1{
+    color:red;
+}
+</style>
 <body>
-    
+    <h1>bbc news</h1>
     <div id="top_heading"></div>
 </body>
 </html>
 <script>
     let popular_story=document.getElementById("top_heading");
+    
     async function TopHeading(){
-        let res =await fetch(`http://newsapi.org/v2/top-headlines?country=in&apiKey=b57ecee37f594630a816044a1d8c5552`);
+        let res =await
+         fetch(`http://newsapi.org/v2/top-headlines?country=in&apiKey=b57ecee37f594630a816044a1d8c5552`);
     let data=await res.json();
     console.log("data:",data);
-    append.news_top(data.articles);
-
+    appendnews_top(data.articles);
+    
       }
-      let news_popular=document.getElementById("")
-      function   appendnews_top(news1){
-        top_heading.innerHTML=null;
-        
-      }
+      TopHeading();
+    //   let news_popular=document.getElementById("")
+    //   function appendnews_top(news1){
+    //     top_heading.innerHTML=null;
+    //     news1.forEach(())
+    //   }
       
 </script>
