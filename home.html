@@ -28,13 +28,24 @@ h1{
     
       }
       TopHeading();
-      let news_popular=document.getElementById("")
+      let news_popular=document.getElementById("top_heading")
       function appendnews_top(news1){
         top_heading.innerHTML=null;
-        news1.forEach(({articles:{author,title,publishedAt,content,description}})=>{
-            let div1=document.createElement("div");
-
-
+        news1.forEach(({author,title,publishedAt,content,description,urlToImage})=>{
+            let er=document.createElement("div");
+        //    div.setAttribute("class","xyz");
+     let div1=document.createElement("div");
+     div1.textContent=author;
+     let th3=document.createElement("h3");
+     th3.textContent=title;
+     let div2=document.createElement("div");
+     let cp3=document.createElement("p");
+     let div4=document.createElement("div");
+div4.textContent=description;
+     let img=document.createElement("img");
+     img.src=urlToImage;
+     er.append(div1,th3,div2,cp3,div4,img);
+     news_popular.append(er);
         })
       }
       
